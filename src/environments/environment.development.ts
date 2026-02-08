@@ -1,4 +1,4 @@
 
   export const environment = {
-  apiBaseUrl:'http://localhost:3000/api',
+  apiBaseUrl:'https://nest-teslo-shop-pofz.onrender.com/api',
 };
