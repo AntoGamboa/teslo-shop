@@ -1,0 +1,82 @@
+<div
+  class="min-h-screen bg-linear-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center p-4 overflow-hidden">
+  <!-- Estrellas de fondo -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    @for (star of stars; track star) {
+    <div class="absolute rounded-full bg-white" [style.left]="star.x + '%'" [style.top]="star.y + '%'"
+      [style.width]="star.size + 'px'" [style.height]="star.size + 'px'" [style.opacity]="star.opacity">
+    </div>
+    }
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <!-- Astronauta flotando -->
+    <div class="relative mb-12">
+      <div class="relative mx-auto w-64 h-80">
+        <!-- Cuerpo del astronauta -->
+        <div
+          class="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-48 bg-gray-200 rounded-t-full rounded-b-lg">
+        </div>
+
+        <!-- Casco -->
+        <div
+          class="absolute top-8 left-1/2 transform -translate-x-1/2 w-44 h-44 bg-gray-300 rounded-full border-4 border-gray-400">
+          <!-- Visor -->
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-900 rounded-full opacity-60">
+          </div>
+          <!-- Reflejo en el visor -->
+          <div class="absolute top-8 left-10 w-16 h-8 bg-blue-300 rounded-full opacity-30"></div>
+        </div>
+
+        <!-- Brazos y piernas flotantes -->
+        <div class="absolute top-24 -left-4 w-12 h-32 bg-gray-200 rounded-lg transform rotate-45"></div>
+        <div class="absolute top-24 -right-4 w-12 h-32 bg-gray-200 rounded-lg transform -rotate-45"></div>
+        <div class="absolute top-44 left-12 w-10 h-24 bg-gray-200 rounded-lg transform rotate-12"></div>
+        <div class="absolute top-44 right-12 w-10 h-24 bg-gray-200 rounded-lg transform -rotate-12"></div>
+
+        <!-- Cables flotando -->
+        <div class="absolute top-16 left-8 w-2 h-10 bg-yellow-500 transform rotate-45"></div>
+        <div class="absolute top-16 right-8 w-2 h-10 bg-yellow-500 transform -rotate-45"></div>
+
+        <!-- Burbujas de oxígeno -->
+        <div class="absolute top-4 left-6 w-6 h-6 bg-blue-400 rounded-full opacity-70"></div>
+        <div class="absolute top-10 right-10 w-4 h-4 bg-blue-400 rounded-full opacity-70"></div>
+        <div class="absolute top-32 -left-2 w-5 h-5 bg-blue-400 rounded-full opacity-70"></div>
+      </div>
+
+      <!-- Planeta de fondo -->
+      <div
+        class="absolute -top-20 -right-20 w-64 h-64 bg-linear-to-r from-blue-800 to-purple-900 rounded-full opacity-20">
+      </div>
+      <div
+        class="absolute -bottom-20 -left-20 w-48 h-48 bg-linear-to-r from-red-900 to-orange-800 rounded-full opacity-20">
+      </div>
+    </div>
+
+    <!-- Texto del error -->
+    <h1 class="text-8xl md:text-9xl font-bold mb-4 animate-pulse">404</h1>
+
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¡Pagina no encontrada!</h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        Parece que la Ruta a la que estas intentando acceder no existe por favor verifica
+        la url
+      </p>
+    </div>
+
+
+    <!-- Mensaje adicional -->
+    <div class="mt-16 p-6 bg-gray-800 bg-opacity-50 rounded-2xl max-w-2xl mx-auto">
+      <h3 class="text-xl font-bold mb-2">¿Necesitas ayuda para volver a tu órbita?</h3>
+      <p class="text-gray-300">
+       Si consideras que escribiste bien la url y te aparece este error
+       no dudes en contactar al equipo de soporte <span class="text-primary font-montserrat">soporte@email.com</span>
+      </p>
+
+    </div>
+  </div>
+
+
+</div>

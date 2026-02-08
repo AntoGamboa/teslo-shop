@@ -1,0 +1,21 @@
+<div class="card bg-base-100  shadow-sm">
+  <figure>
+    <img
+      [src]="product().images[0] |ProductimagePipe"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <a  [routerLink]="['/product',product().slug]" class="hover:underline card-title font-montserrat text-primary text-lg">{{product().title|titlecase}}</a>
+    <p>{{product().description|slice:0:70}}...</p>
+    <div class="card-actions justify-end">
+     <a [routerLink]="['/product',product().slug]"
+      class="link link-accent
+       font-bold text-xl"
+     >
+      Cotiza ¡YA!
+
+     </a>
+
+    </div>
+  </div>
+</div>

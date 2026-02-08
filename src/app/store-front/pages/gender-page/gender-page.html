@@ -1,0 +1,27 @@
+<h1 class="text-3xl font-bold font-montserrat">Todos los productos</h1>
+<h2 class="text-xl mb-5">Para <span class="font-montserrat text-primary font-bold">{{gender()|gender|titlecase}}</span> </h2>
+
+<div class="animate-FadeIn grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
+
+ @if(producsResource.error()){
+  <h2 class="text-3xl text-error">ERROR AL OBTENER LOS PRODUCTOS</h2>
+
+ }
+ <!--  -->
+ @else {
+
+  @for (item of producsResource.value()?.products; track $index) {
+    <card-product [product]="item"
+    />
+
+  }
+
+
+ }
+
+</div>
+
+<app-pagination
+[pages]="producsResource.value()?.pages ?? 0"
+[currentPage]="paginationService.getCurrentpage"
+/>

@@ -1,0 +1,17 @@
+
+@if (productResource.isLoading()) {
+  <div class="flex justify-center items-center h-screen w-screen">
+  <span class="loading loading-spinner loading-lg"></span>
+</div>
+}
+<!--  -->
+
+@if (productResource.hasValue()) {
+  <product-details [product]="productResource.value()" />
+
+}
+@if (productResource.error()) {
+  <app-not-found-page />
+}
+
+

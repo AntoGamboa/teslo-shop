@@ -1,0 +1,39 @@
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Aplicar animación al astronauta */
+.relative.mx-auto.w-64.h-80 > div {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Animación para las burbujas */
+.absolute.bg-blue-400.rounded-full {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Efecto de parpadeo para las estrellas */
+.bg-white.rounded-full {
+  animation: twinkle 3s infinite;
+}
